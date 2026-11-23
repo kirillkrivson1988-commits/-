@@ -1,8 +1,9 @@
 import asyncio
 import os
 import re
-from html import escape
-from urllib.parse import urlparse
+from aiogram import Bot, Dispatcher, F
+from aiogram.client.default import DefaultBotProperties
+from aiogram.enums import ParseMode
 
 from aiohttp import web
 from aiogram import Bot, Dispatcher, F
