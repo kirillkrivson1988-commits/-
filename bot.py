@@ -129,13 +129,13 @@ async def inline_handler(query: InlineQuery):
     formatted_price = format_stars(price)
     number_text = f" {gift_number}" if gift_number else ""
 
-    message_text = (
-        "ð¡ <b>ÐÐ¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÑÐºÐ¾Ðµ Ð¿ÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ</b>\n\n"
-        f"ð <b>{escape(gift_name)}{escape(number_text)}</b>\n\n"
-        f"ÐÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¾ Ð¿Ð¾ÐºÑÐ¿ÐºÐµ ÑÑÐ¾Ð³Ð¾ Ð¿Ð¾Ð´Ð°ÑÐºÐ° Ð·Ð° "
-        f"<b>{formatted_price} â­</b>\n\n"
-        "â³ ÐÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð´ÐµÐ¹ÑÑÐ²Ð¸ÑÐµÐ»ÑÐ½Ð¾ Ð¾Ð³ÑÐ°Ð½Ð¸ÑÐµÐ½Ð½Ð¾Ðµ Ð²ÑÐµÐ¼Ñ."
-    )
+message_text = (
+    "🟡 <b>Пользовательское предложение</b>\n\n"
+    f"🎁 <b>{escape(gift_name)}{escape(number_text)}</b>\n\n"
+    f"Предложение о покупке этого подарка за "
+    f"<b>{formatted_price} ⭐</b>\n\n"
+    "⏳ Предложение действительно ограниченное время."
+)
 
     offer_id = str(abs(hash(
         f"{query.from_user.id}:{url}:{price}"
