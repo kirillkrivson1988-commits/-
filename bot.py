@@ -28,7 +28,7 @@ bot = Bot(
     token=BOT_TOKEN,
     default=DefaultBotProperties(parse_mode=ParseMode.HTML)
 )
-
+dp = Dispatcher()
 
 def format_stars(value: int) -> str:
     return f"{value:,}".replace(",", " ")
