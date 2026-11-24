@@ -84,17 +84,17 @@ def make_keyboard(url: str, offer_id: str):
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text="ÐÐÐÐÐÐÐ¢Ð¬ ÐÐÐÐÐ ÐÐ",
+                    text="показать подарок",
                     url=url,
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="ÐÑÐºÐ°Ð·Ð°ÑÑ",
+                    text="отказано",
                     callback_data=f"decline:{offer_id}",
                 ),
                 InlineKeyboardButton(
-                    text="ÐÑÐ¸Ð½ÑÑÑ",
+                    text="принять",
                     callback_data=f"accept:{offer_id}",
                 ),
             ],
@@ -105,7 +105,8 @@ def make_keyboard(url: str, offer_id: str):
 @dp.message(CommandStart())
 async def start_handler(message):
     await message.answer(
-        "Ð§ÑÐ¾Ð±Ñ ÑÐ¾Ð·Ð´Ð°ÑÑ Ð¿ÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ, Ð¸ÑÐ¿Ð¾Ð»ÑÐ·ÑÐ¹ inline-ÑÐµÐ¶Ð¸Ð¼ Ð±Ð¾ÑÐ°.\n\n"
+        "eiooyc sgubbb qwexxg
+        Ð¿ÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ, Ð¸ÑÐ¿Ð¾Ð»ÑÐ·ÑÐ¹ inline-ÑÐµÐ¶Ð¸Ð¼ Ð±Ð¾ÑÐ°.\n\n"
         "ÐÑÐ¸Ð¼ÐµÑ:\n"
         "<code>@Ð¸Ð¼Ñ_Ð±Ð¾ÑÐ° https://t.me/example 1200</code>\n\n"
         "ÐÐ¾ÑÐ»ÐµÐ´Ð½ÐµÐµ ÑÐ¸ÑÐ»Ð¾ â ÑÐµÐ½Ð° Ð¿ÑÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ Ð² â­."
